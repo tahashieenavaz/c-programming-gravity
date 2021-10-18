@@ -1,9 +1,9 @@
 #include <graphics.h>
 
-#define WIDTH 600 // Canvas width
-#define HEIGHT 600 // Canvas height
+#define WIDTH 500 // Canvas width
+#define HEIGHT 500 // Canvas height
 #define FRAMERATE 60 // delay(1000 / FRAMERATE)
-#define FRICTION false // true || false
+#define FRICTION true // true || false
 #define GRAVITY 1
 
 int main() {
@@ -12,7 +12,7 @@ int main() {
 		float y;
 	};
 	struct cordinate ballPosition;
-    initwindow(WIDTH, HEIGHT, "C Gravity!");
+    initwindow(WIDTH, HEIGHT, "C Gravity! - Taha Shieenavaz");
     cleardevice();
     
     // Position Ball at the center of canvas!
@@ -28,7 +28,7 @@ int main() {
     float dy = .25;
     
     float friction = .85;
-    float ballMaxHeight = 20;
+    float ballMaxHeight = 60;
     
     // Animation Loop Started
     
