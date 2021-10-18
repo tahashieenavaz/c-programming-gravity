@@ -1,10 +1,10 @@
 #include <graphics.h>
 
-#define WIDTH 600
-#define HEIGHT 600
-#define FRAMERATE 60
+#define WIDTH 600 // Canvas width
+#define HEIGHT 600 // Canvas height
+#define FRAMERATE 60 // delay(1000 / FRAMERATE)
+#define FRICTION false // true || false
 #define GRAVITY 1
-
 
 int main() {
 	struct cordinate{
@@ -27,8 +27,7 @@ int main() {
 	float dx = 0;
     float dy = .25;
     
-    float friction = 0.75;
-    
+    float friction = .85;
     float ballMaxHeight = 20;
     
     // Animation Loop Started
@@ -42,7 +41,10 @@ int main() {
 	dy = dy + GRAVITY;
 	if(ballPosition.y > HEIGHT - 20){
 		dy = -ballMaxHeight;
-		ballMaxHeight = ballMaxHeight * friction;
+		// Put friction factor into the game if associated constant says to
+		if(FRICTION){
+			ballMaxHeight  = ballMaxHeight * friction;
+		}
 	}
 	// Used delay to give some sense of animation
 	delay(1000/FRAMERATE);
