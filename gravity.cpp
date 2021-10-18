@@ -23,15 +23,15 @@ int main( )
     while (true)
     {
     	cleardevice();
-		circle(ballPosition.x, ballPosition.y,20);
-		ballPosition.x = ballPosition.x + dx;
-		ballPosition.y = ballPosition.y + dy;
-		dy = dy + gravity;
-		if(ballPosition.y > HEIGHT - 20){
-			dy = -20;
-		}
-		
-		delay(1000/FRAMERATE);
+	circle(ballPosition.x, ballPosition.y,20);
+	ballPosition.x = ballPosition.x + dx;
+	ballPosition.y = ballPosition.y + dy;
+	dy = dy + gravity;
+	if(ballPosition.y > HEIGHT - 20){
+		dy = -20;
+	}
+	
+	delay(1000/FRAMERATE);
     }
     
     
