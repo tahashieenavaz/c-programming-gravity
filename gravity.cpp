@@ -14,11 +14,20 @@ int main() {
 	struct cordinate ballPosition;
     initwindow(WIDTH, HEIGHT, "C Gravity!");
     cleardevice();
+    
+    // Position Ball at the center of canvas!
+    
     ballPosition.x = WIDTH/2;
     ballPosition.y = HEIGHT/2;
     
-    float dx = 0;
+    
+	// Ball's velocity over horizontal & vertical axis
+	// Used floats over integers for smoother movements
+	
+	float dx = 0;
     float dy = .25;
+    
+    // Animation Loop Started
     
     while (true)
     {
@@ -30,7 +39,7 @@ int main() {
 	if(ballPosition.y > HEIGHT - 20){
 		dy = -20;
 	}
-	
+	// Used delay to give some sense of animation
 	delay(1000/FRAMERATE);
     }
     
