@@ -35,7 +35,9 @@ int main() {
     while (true)
     {
     	cleardevice();
-	circle(ballPosition.x, ballPosition.y,20);
+    setfillstyle(SOLID_FILL, RED);
+    setcolor(WHITE);
+    fillellipse(ballPosition.x, ballPosition.y, 20, 20);
 	ballPosition.x = ballPosition.x + dx;
 	ballPosition.y = ballPosition.y + dy;
 	dy = dy + GRAVITY;
