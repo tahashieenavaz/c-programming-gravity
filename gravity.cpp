@@ -7,15 +7,14 @@
 int main( )
 {
 	struct cordinate{
-		int x;
-		int y;
+		float x;
+		float y;
 	};
-	struct cordinate circlePosition;
-	circlePosition.x = 50;
+	struct cordinate ballPosition;
     initwindow(WIDTH, HEIGHT, "C Gravity!");
     cleardevice();
-    float x = WIDTH/2;
-    float y = HEIGHT/2;
+    ballPosition.x = WIDTH/2;
+    ballPosition.y = HEIGHT/2;
     
     float dx = 0;
     float dy = .25;
@@ -24,11 +23,11 @@ int main( )
     while (true)
     {
     	cleardevice();
-		circle(x, y,20);
-		x = x + dx;
-		y = y + dy;
+		circle(ballPosition.x, ballPosition.y,20);
+		ballPosition.x = ballPosition.x + dx;
+		ballPosition.y = ballPosition.y + dy;
 		dy = dy + gravity;
-		if(y > HEIGHT - 20){
+		if(ballPosition.y > HEIGHT - 20){
 			dy = -20;
 		}
 		
